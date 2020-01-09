@@ -37,7 +37,6 @@ public class UmsMemberServiceImpl implements UmsMemberService {
         return CommonResult.success(sb.toString(), "获取验证码成功");
     }
 
-
     //对输入的验证码进行校验
     @Override
     public CommonResult verifyAuthCode(String telephone, String authCode) {
