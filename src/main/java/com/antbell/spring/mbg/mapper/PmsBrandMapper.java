@@ -4,11 +4,9 @@ import com.antbell.spring.mbg.model.PmsBrand;
 import com.antbell.spring.mbg.model.PmsBrandExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
 public interface PmsBrandMapper {
-    long countByExample(PmsBrandExample example);
+    int countByExample(PmsBrandExample example);
 
     int deleteByExample(PmsBrandExample example);
 
