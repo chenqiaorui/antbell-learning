@@ -7,30 +7,30 @@ spring:
     username: root
     password: root
   redis:
-    host: localhost # Redis��������ַ
-    database: 0 # Redis���ݿ�������Ĭ��Ϊ0��
-    port: 6379 # Redis���������Ӷ˿�
-    password: # Redis�������������루Ĭ��Ϊ�գ�
+    host: localhost
+    database: 0
+    port: 6379
+    password:
     jedis:
       pool:
-        max-active: 8 # ���ӳ������������ʹ�ø�ֵ��ʾû�����ƣ�
-        max-wait: -1ms # ���ӳ���������ȴ�ʱ�䣨ʹ�ø�ֵ��ʾû�����ƣ�
-        max-idle: 8 # ���ӳ��е�����������
-        min-idle: 0 # ���ӳ��е���С��������
-    timeout: 3000ms # ���ӳ�ʱʱ�䣨���룩
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 3000ms
 
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml
     - classpath*:com/**/mapper/*.xml
-# �Զ���redis key
+
 redis:
   key:
     prefix:
       authCode: "portal:authCode:"
     expire:
-      authCode: 120 # ��֤�볬��ʱ��
-# 自定义jwt key
+      authCode: 120
+
 jwt:
   tokenHeader: Authorization #JWT存储的请求头
   secret: mySecret #JWT加解密使用的密钥
